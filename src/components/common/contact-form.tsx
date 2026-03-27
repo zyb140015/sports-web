@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 import { buttonVariants } from "@/components/ui/button-variants";
+import { withBasePath } from "@/lib/base-path";
 import { cn } from "@/lib/utils";
 import {
   contactFormSchema,
@@ -40,7 +41,7 @@ export function ContactForm() {
   const handleSubmit = async (values: ContactFormValues) => {
     setSubmitMessage("提交中，请稍候...");
 
-    const response = await fetch("/api/contact", {
+    const response = await fetch(withBasePath("/api/contact"), {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

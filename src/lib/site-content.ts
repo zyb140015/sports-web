@@ -1,3 +1,5 @@
+import { withBasePath } from "@/lib/base-path";
+
 export const siteConfig = {
   name: "Pulse Studio",
   title: "Pulse Studio | 高端运动训练品牌",
@@ -5,7 +7,7 @@ export const siteConfig = {
     "现代化运动训练品牌官网，聚焦私教课程、团课体验与训练成果展示。",
   ctaLabel: "预约免费体验",
   phone: "15708422834",
-  heroImage: "/images/hero-training.jpg",
+  heroImage: withBasePath("/images/hero-training.jpg"),
 } as const;
 
 export const navItems = [
@@ -47,17 +49,17 @@ export const programs = [
   {
     title: "力量进阶",
     description: "围绕动作模式、力量增长与体态稳定，建立长期可持续的训练基础。",
-    image: "/images/program-strength.jpg",
+    image: withBasePath("/images/program-strength.jpg"),
   },
   {
     title: "燃脂塑形",
     description: "结合心肺训练和饮食建议，帮助用户高效减脂并提升线条感。",
-    image: "/images/program-fat-loss.jpg",
+    image: withBasePath("/images/program-fat-loss.jpg"),
   },
   {
     title: "私教定制",
     description: "根据目标、体能和时间安排，提供一对一训练与阶段性复盘。",
-    image: "/images/program-private.jpg",
+    image: withBasePath("/images/program-private.jpg"),
   },
 ] as const;
 
@@ -66,19 +68,19 @@ export const coaches = [
     name: "Lina",
     specialty: "瑜伽与体态控制",
     description: "专注柔韧性、呼吸控制与压力释放，适合久坐与恢复人群。",
-    image: "/images/coach-lina.jpg",
+    image: withBasePath("/images/coach-lina.jpg"),
   },
   {
     name: "Jason",
     specialty: "力量与增肌",
     description: "擅长复合动作训练编排，帮助学员建立稳定的力量提升路径。",
-    image: "/images/coach-jason.jpg",
+    image: withBasePath("/images/coach-jason.jpg"),
   },
   {
     name: "Mika",
     specialty: "燃脂与体能",
     description: "以高效团课和节奏管理见长，帮助用户更快建立训练习惯。",
-    image: "/images/coach-mika.jpg",
+    image: withBasePath("/images/coach-mika.jpg"),
   },
 ] as const;
 
